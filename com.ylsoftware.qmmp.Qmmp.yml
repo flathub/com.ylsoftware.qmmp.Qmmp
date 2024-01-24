@@ -30,8 +30,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/taglib/taglib.git
-        tag: v1.13.1
-        commit: c840222a391439285478820b4477d5fa6b78d63d
+        tag: v2.0
+        commit: 0ebb14b855b788c1dd19ca322fc8f7b7e5f1e4e7
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
