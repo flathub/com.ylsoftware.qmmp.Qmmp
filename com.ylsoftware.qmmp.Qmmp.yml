@@ -30,8 +30,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/taglib/taglib.git
-        tag: v1.13.1
-        commit: c840222a391439285478820b4477d5fa6b78d63d
+        tag: v2.0
+        commit: 0ebb14b855b788c1dd19ca322fc8f7b7e5f1e4e7
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -126,8 +126,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://qmmp.ylsoftware.com/files/qmmp/2.1/qmmp-2.1.5.tar.bz2
-        sha256: 25be3f2b19d8d70b6b5136c3f97d385a5edbf40dac67dd84fcdd4af9d554f795
+        url: https://qmmp.ylsoftware.com/files/qmmp/2.1/qmmp-2.1.6.tar.bz2
+        sha256: 927aa8e720a470efdb16633efb3f927625b3a4328af68a15d30aa57082a3eeca
         x-checker-data:
           type: anitya
           project-id: 4129
