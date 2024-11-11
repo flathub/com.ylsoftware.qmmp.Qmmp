@@ -126,8 +126,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://qmmp.ylsoftware.com/files/qmmp/2.2/qmmp-2.2.1.tar.bz2
-        sha256: bee321784393b2fa33081a13b8f1f6e2635f7a489acbd06de325150b30988a94
+        url: https://qmmp.ylsoftware.com/files/qmmp/2.2/qmmp-2.2.2.tar.bz2
+        sha256: 53055984b220ec1f825b885db3ebdb54a7a71ac67935438ee4ff9c082f600c4f
         x-checker-data:
           type: anitya
           project-id: 4129
