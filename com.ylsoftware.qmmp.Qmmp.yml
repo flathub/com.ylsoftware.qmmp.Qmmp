@@ -114,8 +114,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/libxmp/libxmp/releases/download/libxmp-4.6.0/libxmp-4.6.0.tar.gz
-        sha256: 2d3c45fe523b50907e89e60f9a3b7f4cc9aab83ec9dbba7743eaffbcdcb35ea6
+        url: https://github.com/libxmp/libxmp/releases/download/libxmp-4.6.1/libxmp-4.6.1.tar.gz
+        sha256: af605e72c83b24abaf03269347e24ebc3fc06cd7b495652a2c619c1f514bc5cb
         x-checker-data:
           type: anitya
           project-id: 1784
