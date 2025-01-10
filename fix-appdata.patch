@@ -1,0 +1,34 @@
+diff --git a/src/app/metainfo/com.ylsoftware.qmmp.metainfo.xml b/src/app/metainfo/com.ylsoftware.qmmp.metainfo.xml
+index c5fb972..22395de 100644
+--- a/src/app/metainfo/com.ylsoftware.qmmp.metainfo.xml
++++ b/src/app/metainfo/com.ylsoftware.qmmp.metainfo.xml
+@@ -68,23 +68,26 @@
+   <project_group>none</project_group>
+   <screenshots>
+     <screenshot type="default">
+-      <image type="source">https://qmmp.ylsoftware.com/images/qmmp-0.9_full_2.png</image>  
++      <image type="source">https://qmmp.ylsoftware.com/images/qmmp-0.9_full_2.png</image>
++      <caption>Playlist and visualizations as multiple windows</caption>
+     </screenshot>
+     <screenshot>
+       <image type="source">https://qmmp.ylsoftware.com/images/qmmp-0.9_full_1.png</image>
++      <caption>Small main window</caption>
+     </screenshot>
+     <screenshot>
+       <image type="source">https://qmmp.ylsoftware.com/images/qmmp-1.4_full_1.png</image>
++      <caption>Main window</caption>
+     </screenshot>
+     <screenshot>
+       <image type="source">https://qmmp.ylsoftware.com/images/qmmp-1.4_full_2.png</image>
++      <caption>Main window with visualization</caption>
+     </screenshot>
+   </screenshots>
+   <launchable type="desktop-id">qmmp.desktop</launchable>
+   <update_contact>forkotov02_AT_ya.ru</update_contact>
+   <translation type="qt">qmmp</translation>
+-  <developer>
+-    <id>com.ylsoftware.qmmp</id>
++  <developer id="com.ylsoftware.qmmp">
+     <name>Qmmp Development Team</name>
+   </developer>
+   <releases>
