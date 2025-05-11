@@ -104,8 +104,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/libxmp/libxmp/releases/download/libxmp-4.6.2/libxmp-4.6.2.tar.gz
-        sha256: acac1705be2c4fb4d2d70dc05759853ba6aab747a83de576b082784d46f5a4b9
+        url: https://github.com/libxmp/libxmp/releases/download/libxmp-4.6.3/libxmp-4.6.3.tar.gz
+        sha256: b189a2ff3f3eef0008512e0fb27c2cdc27480bc1066b82590a84d02548fab96d
         x-checker-data:
           type: anitya
           project-id: 1784
@@ -116,8 +116,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://qmmp.ylsoftware.com/files/qmmp/2.2/qmmp-2.2.4.tar.bz2
-        sha256: 489db0dd2bed32ba3cae5ab8b2f80d31e97e81bdfc5dbd7c82487c29e325cf81
+        url: https://qmmp.ylsoftware.com/files/qmmp/2.2/qmmp-2.2.5.tar.bz2
+        sha256: 58211f327ac385abbc7d75e6a5d8dd64bcdb5cc0f1119329f2927d1631097e18
         x-checker-data:
           type: anitya
           project-id: 4129
