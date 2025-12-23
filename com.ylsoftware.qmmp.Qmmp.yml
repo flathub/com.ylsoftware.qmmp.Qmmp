@@ -52,8 +52,8 @@ modules:
       - --disable-static
     sources:
       - type: archive
-        url: https://github.com/libcdio/libcdio/archive/refs/tags/2.2.0.tar.gz
-        sha256: df007a9b9667797e027e573822cc865e5e106352f8a6fbca67ee8e9e7a1e5b51
+        url: https://github.com/libcdio/libcdio/archive/refs/tags/2.3.0.tar.gz
+        sha256: f5eb6fb2a9141d200b4e5a88bca16f29d1c7b0d9fe7da2d0c4135c2d95f18268
         x-checker-data:
           type: anitya
           project-id: 1573
@@ -126,8 +126,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://qmmp.ylsoftware.com/files/qmmp/2.3/qmmp-2.3.0.tar.bz2
-        sha256: 01c3e30367c885178cd115594d20f694a47a352fd7e65fcf5722e12ac8333063
+        url: https://qmmp.ylsoftware.com/files/qmmp/2.3/qmmp-2.3.1.tar.bz2
+        sha256: a61d1c1faa9c411c75292a5710999182b918831b8f0f200c87149e3ff353bea9
         x-checker-data:
           type: anitya
           project-id: 4129
