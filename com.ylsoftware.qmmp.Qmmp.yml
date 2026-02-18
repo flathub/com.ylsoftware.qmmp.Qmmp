@@ -1,6 +1,6 @@
 app-id: com.ylsoftware.qmmp.Qmmp
 runtime: org.kde.Platform
-runtime-version: 6.9
+runtime-version: 6.10
 sdk: org.kde.Sdk
 command: qmmp
 rename-icon: qmmp
@@ -64,6 +64,8 @@ modules:
 
   - name: soxr
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: http://downloads.sourceforge.net/soxr/soxr-0.1.3-Source.tar.xz
@@ -85,18 +87,6 @@ modules:
           project-id: 866
           stable-only: true
           url-template: https://github.com/libgme/game-music-emu/archive/refs/tags/$version.tar.gz
-
-  - name: wildmidi
-    buildsystem: cmake-ninja
-    sources:
-      - type: archive
-        url: https://github.com/Mindwerks/wildmidi/archive/wildmidi-0.4.6.tar.gz
-        sha256: 051b8c51699af594ddd3e4e3b06bad3564e9499c3c6b9e6f880cb2f92bcfa9c8
-        x-checker-data:
-          type: anitya
-          project-id: 9179
-          stable-only: true
-          url-template: https://github.com/Mindwerks/wildmidi/archive/wildmidi-$version.tar.gz
 
   - name: libshout
     buildsystem: autotools
