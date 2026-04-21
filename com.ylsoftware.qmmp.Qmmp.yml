@@ -19,8 +19,11 @@ finish-args:
 cleanup:
   - '*.a'
   - '*.la'
-  - /lib/pkgconfig
   - /include
+  - /lib/cmake
+  - /lib/pkgconfig
+  - /share/aclocal
+  - /share/doc
   - /share/man
 
 modules:
