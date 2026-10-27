@@ -1,6 +1,6 @@
 app-id: com.ylsoftware.qmmp.Qmmp
 runtime: org.kde.Platform
-runtime-version: 6.11
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: qmmp
 rename-icon: qmmp
@@ -15,16 +15,17 @@ finish-args:
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0
   - --filesystem=xdg-music
+  - --env=QT_QPA_PLATFORM=wayland;xcb
 
 cleanup:
-  - '*.a'
-  - '*.la'
   - /include
   - /lib/cmake
   - /lib/pkgconfig
   - /share/aclocal
   - /share/doc
   - /share/man
+  - '*.a'
+  - '*.la'
 
 modules:
   - name: libcddb
@@ -43,7 +44,7 @@ modules:
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
 
-  - name: libcdio
+  - name: libcdio-C
     config-opts:
       - --without-cd-drive
       - --without-cd-info
@@ -53,17 +54,18 @@ modules:
       - --without-iso-read
       - --with-pic
       - --disable-static
-    sources:
-      - type: archive
-        url: https://github.com/libcdio/libcdio/archive/refs/tags/2.4.0.tar.gz
-        sha256: 62b940b458241b3b03eee554f07094c89f4afbfdb3180b8bacd336970e145df1
-        x-checker-data:
-          type: anitya
-          project-id: 1573
-          stable-only: true
-          url-template: https://github.com/libcdio/libcdio/archive/refs/tags/$version.tar.gz
     cleanup:
       - /bin
+    sources:
+      - type: archive
+        url: https://github.com/libcdio/libcdio-C/releases/download/2.4.0/libcdio-2.4.0.tar.gz
+        sha256: bf7cde63762bb12db7755c395c441e49406fde7e1d9f9a9be7e3b940b1f405d7
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/libcdio/libcdio-C/releases/latest
+          version-query: .tag_name
+          url-query: .assets[] | select(.name=="libcdio-" + $version + ".tar.gz")
+            | .browser_download_url
 
   - name: soxr
     buildsystem: cmake-ninja
@@ -83,13 +85,14 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.5.tar.gz
-        sha256: 8531678502451c2cf04248cda45c8b4645e19fcfb63e6a7ec2549641c47bb392
+        url: https://github.com/libgme/game-music-emu/releases/download/0.6.5/libgme-0.6.5-src.tar.gz
+        sha256: a133f19278222136ba0d8c27b64a07987ba05fec9d2e6d293ccd8cabdd97ddbb
         x-checker-data:
-          type: anitya
-          project-id: 866
-          stable-only: true
-          url-template: https://github.com/libgme/game-music-emu/archive/refs/tags/$version.tar.gz
+          type: json
+          url: https://api.github.com/repos/libgme/game-music-emu/releases/latest
+          version-query: .tag_name
+          url-query: .assets[] | select(.name=="libgme-" + $version + "-src.tar.gz")
+            | .browser_download_url
 
   - name: libshout
     buildsystem: autotools
@@ -110,10 +113,11 @@ modules:
         url: https://github.com/libxmp/libxmp/releases/download/libxmp-4.7.4/libxmp-4.7.4.tar.gz
         sha256: a25583aa3b031c78ba0b4e83387fa596fb05742622e60f60d1540ee2af79b8d9
         x-checker-data:
-          type: anitya
-          project-id: 1784
-          stable-only: true
-          url-template: https://github.com/libxmp/libxmp/releases/download/libxmp-$version/libxmp-$version.tar.gz
+          type: json
+          url: https://api.github.com/repos/libxmp/libxmp/releases/latest
+          version-query: .tag_name | sub("^libxmp-"; "")
+          url-query: .assets[] | select(.name=="libxmp-" + $version + ".tar.gz") |
+            .browser_download_url
 
   - name: qmmp
     buildsystem: cmake-ninja
