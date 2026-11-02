@@ -58,7 +58,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://github.com/libcdio/libcdio-C/releases/download/2.4.0/libcdio-2.4.0.tar.gz
+        url: 
+          https://github.com/libcdio/libcdio-C/releases/download/2.4.0/libcdio-2.4.0.tar.gz
         sha256: bf7cde63762bb12db7755c395c441e49406fde7e1d9f9a9be7e3b940b1f405d7
         x-checker-data:
           type: json
@@ -85,7 +86,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/libgme/game-music-emu/releases/download/0.6.5/libgme-0.6.5-src.tar.gz
+        url: 
+          https://github.com/libgme/game-music-emu/releases/download/0.6.5/libgme-0.6.5-src.tar.gz
         sha256: a133f19278222136ba0d8c27b64a07987ba05fec9d2e6d293ccd8cabdd97ddbb
         x-checker-data:
           type: json
@@ -110,7 +112,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/libxmp/libxmp/releases/download/libxmp-4.7.4/libxmp-4.7.4.tar.gz
+        url: 
+          https://github.com/libxmp/libxmp/releases/download/libxmp-4.7.4/libxmp-4.7.4.tar.gz
         sha256: a25583aa3b031c78ba0b4e83387fa596fb05742622e60f60d1540ee2af79b8d9
         x-checker-data:
           type: json
@@ -123,8 +126,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://qmmp.ylsoftware.com/files/qmmp/2.4/qmmp-2.4.2.tar.bz2
-        sha256: 8042f83a9ed810e170f7127e6eb53c6b29038dbf504a01c0867c19e5fd200e7d
+        url: https://qmmp.ylsoftware.com/files/qmmp/2.4/qmmp-2.4.3.tar.bz2
+        sha256: 4a50fe5df4704484e2855a39fe33f602e175e707d359bd92ca8a54008f2ecc25
         x-checker-data:
           type: anitya
           project-id: 4129
